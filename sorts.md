@@ -35,8 +35,11 @@ for (j = 0; j < n - 1; j++) {
 
 ##### Complexity
 *Worst Case: O(n<sup>2</sup>)
+
 *Best Case: O(n<sup>2</sup>)
+
 *Average Case: O(n<sup>2</sup>)
+
 *Worst Case Space: O(n)
 
 
@@ -76,12 +79,15 @@ for (i = 1; i < n; i++)  {
 *Worst Case:
   * O(n<sup>2</sup>) comparisons
   * O(n<sup>2</sup>) swaps
+
 *Best Case:
   * O(n) comparisons
   * O(1) swaps
+
 *Average Case:
   * O(n<sup>2</sup>) comparisons
   * O(n<sup>2</sup>) swaps
+  
 *Worst Case Space: O(n)
 
 
