@@ -171,5 +171,68 @@ void mergeSort(int arr[], int l, int r) {
 * Average Case: O(n logn)
 * Worst Case Space: O(n)
 
+## Quicksort
+* Pick an element, called a pivot, from the array
+* Reorder the array so that all elements with a value less than the pivot come before the pivot. This is called partitioning
+* Apply the same steps above recursively to the subarrays until the list is completely sorted
+
+> 4  2  [3]  5  6  9		# 3 is pivot
+
+> 4  2  [3]  5  6  9		# 42 is left, 569 is right
+
+> 4  2  [3]  5  6  9		# 5 > 3, shift right pointer to 3
+
+> 3  2  4  5  6  9			# shift values at pointers
+
+> 3  2  4  5  6  9			# move pointers one step, both point to 2
+
+> 2  3  4  5  6  9			# 3 > 2, swap
+
+##### Implementation
+```C++
+/* This function takes last element as pivot, places
+   the pivot element at its correct position in sorted
+    array, and places all smaller (smaller than pivot)
+   to left of pivot and all greater elements to right
+   of pivot */
+int partition (int arr[], int low, int high) {
+    int pivot = arr[high];    	// pivot
+    int i = (low - 1);  		// Index of smaller element
+ 
+    for (int j = low; j <= high- 1; j++) {
+        // If current element is smaller than or
+        // equal to pivot
+        if (arr[j] <= pivot) {
+            i++;    // increment index of smaller element
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[i + 1], &arr[high]);
+    return (i + 1);
+}
+ 
+/* The main function that implements QuickSort
+ arr[] --> Array to be sorted,
+  low  --> Starting index,
+  high  --> Ending index */
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        /* pi is partitioning index, arr[p] is now
+           at right place */
+        int pi = partition(arr, low, high);
+ 
+        // Separately sort elements before
+        // partition and after partition
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+```
+
+##### Complexity
+* Worst Case: O(n<sup>2</sup>)
+* Best Case: O(n)
+* Average Case: O(n logn)
+* Worst Case Space: O(n)
 
 
