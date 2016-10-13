@@ -272,3 +272,33 @@ public:
   * top(): O(n)
 
 ## Binary Heaps
+* A binary tree
+* The tree must follow the heap rule:
+  * min-heap: The values of a node's children are greater than or equal to the value of the parent node
+  * max-heap: The values of a node's children are less than or equal to the value of the parent node
+* The tree must be a complete binary tree, meaning every level except the lowest is completely filled
+* A Binary Heap has 2 main functions:
+  * push():
+    * place the new entry in the first available position
+    * swap the new node with it's parent until it satisfies the heap rule
+  * pop():
+    * save the top of the heap
+    * move the last entry to the root
+    * swap the root with one of it's children until it satisfies the heap rule
+    * return the saved top
+
+##### Complexity
+* Search:
+  * average: O(n)
+  * worst: O(n)
+* Insert:
+  * average: O(1)
+  * worst: O(logn)
+* Delete:
+  * average: O(logn)
+  * worst: O(logn)
+* Space: O(n)
+
+
+
+
