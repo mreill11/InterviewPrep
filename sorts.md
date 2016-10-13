@@ -88,6 +88,7 @@ for (i = 1; i < n; i++)  {
 ## Merge Sort
 * Divide an unsorted list into n sublists, each containing one element
 * Repeatedly merge the sublists to create larger sorted sublists
+* Merge Sort is stable
 
 > 14  7  3  12  9  11  6  2
 
@@ -175,6 +176,7 @@ void mergeSort(int arr[], int l, int r) {
 * Pick an element, called a pivot, from the array
 * Reorder the array so that all elements with a value less than the pivot come before the pivot. This is called partitioning
 * Apply the same steps above recursively to the subarrays until the list is completely sorted
+* Quicksort is not stable
 
 > 4  2  [3]  5  6  9		# 3 is pivot
 
