@@ -88,4 +88,83 @@ void printPostorder(struct node* node) {
 
 ## Binary Search Tree
 ![binarysearchtree](http://proprogramming.org/wp-content/uploads/2015/07/binary-search-tree-c-.png)
+* A Binary Search Tree is a binary tree that satisfies the following condition:
+  * A parent node is greater than all values in it's left subtree, but less than all values in it's right subtree
+
+##### Implementation
+* Array Implementation:
+  * Breadth First Order (root, children, grandchildren)
+  * Traversal References:
+    * Parent(i) = floor((i - 1) / 2)
+    * LeftChild(i) = (2 * i) + 1
+    * RightChild(i) = (2 * i) + 2
+* Node Implementation
+```C++
+struct Node {
+	T data;
+	Node *left;
+	Node *right;
+}
+```
+
+##### Traversals
+1. Breadth-First
+  * Travels through tree left to right horizontally
+  * Implementation using a queue:
+```C++
+template <typename T>
+void bfs(Node<T> *root) {
+	queue<Node<T>*> q;
+	q.push(root);
+	while (!q.empty()) {
+		auto n = q.front();
+		q.pop();
+		cout << n->data << " ";
+		if (n->left)
+			q.push(n->left);
+		if (n->right)
+			q.push(n->right);
+	}
+	cout << endl;
+}
+```
+2. Depth-First
+  * Starts at the root and travels as far downward as possible before backtracking
+  * Implementation using a stack:
+```C++
+template <typename T>
+void dsf(Node<T> *root) {
+	stack<Node<T>*> s;
+	s.push(root);
+	while (!s.empty()) {
+		auto n = s.top(); s.pop();
+        cout << n->data << " ";
+        if (n->right)
+        	s.push(n->right);
+        if (n->left)
+        	s.push(n->left);
+	}
+	cout << endl;
+}
+```
+3. Depth-First (recursive)
+  *Implementation:
+```C++
+template <typename T>
+void dfs_recursive(Node<T> *root) {
+	if (root == nullptr) {
+	 	return;
+	}
+
+	cout << root->data << " ";
+
+	if (root->left)  dfs_recursive(root->left);
+	if (root->right) dfs_recursive(root->right);
+}
+```
+
+
+
+
+
 
