@@ -36,3 +36,6 @@ void quicksort ( int list[], int left, int right )
   quicksort ( list, pivot + 1, right );
 }
 ```
+
+## Space Complexity
+* Space complexity accounts for the input size as well as auxilary spaced used
