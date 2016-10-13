@@ -85,3 +85,7 @@ void printPostorder(struct node* node) {
 }
 ```
 
+
+## Binary Search Tree
+![binarysearchtree](http://proprogramming.org/wp-content/uploads/2015/07/binary-search-tree-c-.png)
+
