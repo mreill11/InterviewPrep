@@ -176,7 +176,36 @@ void List<T>::erase(iterator it) {
   * Worst Case: O(n)
 
 ## Stacks
+* Stacks are a LIFO abstract data type
+* They are usually implemented with a singly linked list, but they can also be implemented with an array
+* Stacks have 4 main functions:
+  * push() - adds an element to the top
+  * pop() - deletes the element at the top
+  * top() - returns the top element
+  * empty() - returns whether or not the stack is empty
+* Stacks do not support access, searching for, or insertion anywhere except the top of the stack
+* Size is also limited
 
+##### Implementation
+* Linked List implementation: top of the stack is the front of the list
+```C++
+template <typename T>
+ class vector_stack {
+ std::vector<T> data;
+ public:
+     bool empty()   const { return data.empty(); }
+     const T& top() const { return data.back(); }
+     void push(const T& value) {
+         data.push_back(value);
+     }
+     void pop() {
+         data.pop_back();
+} };
+```
+
+##### Complexity
+* push(): O(1)
+* pop(): O(1)
 
 ## Queues
 
