@@ -98,7 +98,7 @@ void printPostorder(struct node* node) {
     * Parent(i) = floor((i - 1) / 2)
     * LeftChild(i) = (2 * i) + 1
     * RightChild(i) = (2 * i) + 2
-* Node Implementation
+* Node Implementation:
 ```C++
 struct Node {
 	T data;
@@ -106,6 +106,10 @@ struct Node {
 	Node *right;
 }
 ```
+
+##### Complexity
+* O(logn) on average for search, insert, and remove
+* O(n) worst case
 
 ##### Traversals
 1. Breadth-First
@@ -148,7 +152,7 @@ void dsf(Node<T> *root) {
 }
 ```
 3. Depth-First (recursive)
-  *Implementation:
+  * Implementation:
 ```C++
 template <typename T>
 void dfs_recursive(Node<T> *root) {
@@ -163,8 +167,22 @@ void dfs_recursive(Node<T> *root) {
 }
 ```
 
+## B-Tree
+![btree](http://flylib.com/books/2/300/1/html/2/images/17fig34.jpg)
+* A B-Tree is a more generalized BST
+* Nodes of a B-Tree can have more than two children, and can contain more than a single entry
+* A B-Tree is often found in file systems and databases
+* Every node is a sorted array, and a B-Tree is self balancing
+  * Every node has at least MIN entries and MIN+1 children (except root)
+  * Every node has at most 2 * MIN entries and 2 * MIN + 1 children
+
+##### Complexity
+* O(logn) for search, insert, and remove average case
+* O(logn) worst case for the above operations
 
 
+## Red-Black Tree
+![redblacktree](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Red-black_tree_example.svg/2000px-Red-black_tree_example.svg.png)
 
 
 
