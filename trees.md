@@ -182,7 +182,7 @@ void dfs_recursive(Node<T> *root) {
 
 
 ## Red-Black Tree
-![redblacktree](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Red-black_tree_example.svg/2000px-Red-black_tree_example.svg.png)
+![redblacktree](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Red-black_tree_example.svg/2000px-Red-black_tree_example.svg.png =500x)
 
 
 
