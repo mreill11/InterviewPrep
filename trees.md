@@ -183,5 +183,18 @@ void dfs_recursive(Node<T> *root) {
 
 ## Red-Black Tree
 ![redblacktree](http://d1gjlxt8vb0knt.cloudfront.net//wp-content/uploads/RedBlackTree.png)
+* Red-Black Trees are essentially B-Tree's that fit into BSTs
+* A black node signifies a B-Node
+  * Red nodes are children of B-Nodes
+* The root must be black, and no path has two red nodes in a row
+* Every path has the same number of black nodes, every path has the same number of B-Nodes
+* Rules of Insertion:
+  * If the tree is empty, the new node is black. Otherwise, it is red
+  * Unbalanced 4 node:
+    * Rotate left to make a new local root with the old root as the left child and the right child still the right child
+    * Switch colors of the new local root and the new left child. If the new root had children before it was rotated, make them child of the right child
+  * Overfull 5 node:
+    * Flip colors of all local black nodes and their children
+
 
 
