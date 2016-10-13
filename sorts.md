@@ -246,6 +246,28 @@ void quickSort(int arr[], int low, int high) {
 
 ![heapsort](http://csharpcorner.mindcrackerinc.netdna-cdn.com/UploadFile/fd0172/heap-sort-in-java/Images/pic-2.jpg)
 
+##### Implementation
+```C++
+// main function to do heap sort
+void heapSort(int arr[], int n) {
+    // Build heap (rearrange array)
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i);
+ 
+    // One by one extract an element from heap
+    for (int i=n-1; i>=0; i--) {
+        // Move current root to end
+        swap(arr[0], arr[i]);
+ 
+        // call max heapify on the reduced heap
+        heapify(arr, i, 0);
+    }
+}
+```
 
-
+##### Complexity
+* Worst Case: O(n logn)
+* Best Case: O(n logn)
+* Average Case: O(n logn)
+* Worst Case Space: O(1)
 
