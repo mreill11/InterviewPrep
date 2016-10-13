@@ -2,8 +2,6 @@ Complexity
 ==========
 
 ## Time Complexity
-* Constant, independent of size:
-```statement;```
 * Linear, directly proportional to n:
 ```C
 for ( i = 0; i < N; i++ )
