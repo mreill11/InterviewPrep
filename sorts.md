@@ -34,10 +34,10 @@ for (j = 0; j < n - 1; j++) {
 ```
 
 ##### Complexity
-* Worst Case: O(n<sup>2</sup>)
-* Best Case: O(n<sup>2</sup>)
-* Average Case: O(n<sup>2</sup>)
-* Worst Case Space: O(n<sup>2</sup>)
+*Worst Case: O(n<sup>2</sup>)
+*Best Case: O(n<sup>2</sup>)
+*Average Case: O(n<sup>2</sup>)
+*Worst Case Space: O(n)
 
 
 ## Insertion Sort
@@ -70,10 +70,20 @@ for (i = 1; i < n; i++)  {
 
 	arr[j+1] = key;
 }
+```
 
 ##### Complexity
 *Worst Case:
-  * O(n<sup>2</sup>) 
+  * O(n<sup>2</sup>) comparisons
+  * O(n<sup>2</sup>) swaps
+*Best Case:
+  * O(n) comparisons
+  * O(1) swaps
+*Average Case:
+  * O(n<sup>2</sup>) comparisons
+  * O(n<sup>2</sup>) swaps
+*Worst Case Space: O(n)
+
 
 
 
