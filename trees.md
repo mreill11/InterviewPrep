@@ -196,5 +196,22 @@ void dfs_recursive(Node<T> *root) {
   * Overfull 5 node:
     * Flip colors of all local black nodes and their children
 
+##### Complexity
+* Space: O(n)
+* Search, insert, delete: O(log n)
+
+
+##Treap
+![treap](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TreapAlphaKey.svg/220px-TreapAlphaKey.svg.png)
+* A Treap is basically a BST + a Max Binary Heap
+* Each node has a value and a randomly assigned priority. The value is used to form a BST, and the priority to form a max heap
+* Insertion works like in a BST, then rotate to account for priority and heap rule
+
+##### Complexity
+* Best: O(log n)
+* Average: O(log n)
+* Worst: O(n)
+
+
 
 
