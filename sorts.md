@@ -7,9 +7,13 @@ Sorts
 * This grows the sorted sublist by one element
 
 > 64  25  12  22  11
+
 > 11  25  12  22  64
+
 > 11  12  25  22  64
+
 > 11  12  22  25  64
+
 > 11  12  22  25  64
 
 ##### Implementation
