@@ -190,17 +190,19 @@ void List<T>::erase(iterator it) {
 * Linked List implementation: top of the stack is the front of the list
 ```C++
 template <typename T>
- class vector_stack {
- std::vector<T> data;
- public:
-     bool empty()   const { return data.empty(); }
-     const T& top() const { return data.back(); }
-     void push(const T& value) {
-         data.push_back(value);
-     }
-     void pop() {
-         data.pop_back();
-} };
+class vector_stack {
+std::vector<T> data;
+
+public:
+	bool empty()   const { return data.empty(); }
+	const T& top() const { return data.back(); }
+ 	void push(const T& value) {
+     	data.push_back(value);
+ 	}
+ 	void pop() {
+     	data.pop_back();
+ 	} 
+};
 ```
 
 ##### Complexity
@@ -208,7 +210,47 @@ template <typename T>
 * pop(): O(1)
 
 ## Queues
+* Queues are a FIFO abstract data type
+* Can be implemented with multiple simple data structures
+* Queues have 5 basic functions:
+  * push() - add an element to the back of the queue
+  * pop() - remove an element from the front of the queue
+  * front() - return the item at the front
+  * back() - return the item at the back
+  * empty() - return whether or not the queue is empty
+* Queues only support insertion at the back, and deletion at the front
 
+##### Implementation
+* Implementing a Queue with two Stacks
+```C++
+template <typename T>
+class stack_queue {
+std::stack<T> in, out;
+	void in_to_out() {
+     	while (!in.empty()) {
+         	out.push(in.top());
+         	in.pop();
+	 	}
+	} 
+public:
+    bool empty() const { return in.empty() && out.empty(); }
+    const T& front() {
+        if (out.empty()) in_to_out();
+       		return out.top();
+     }
+    const T& back() const { return in.top(); }
+    void push(const T& value) {
+        in.push(value);
+    }
+    void pop() {
+      	if (out.empty()) in_to_out();
+		out.pop();
+	} 
+};
+```
+
+##### Complexity
+* All cases are O(1)
 
 ## Priority Queues
 
