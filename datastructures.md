@@ -166,6 +166,15 @@ void List<T>::erase(iterator it) {
 }
 ```
 
+##### Complexity
+* Search: O(n)
+* Insert:
+  * Best Case: O(1)
+  * Worst Case: O(n)
+* Delete:
+  * Best Case: O(1)
+  * Worst Case: O(n)
+
 ## Stacks
 
 
