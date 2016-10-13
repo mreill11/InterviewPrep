@@ -253,6 +253,22 @@ public:
 * All cases are O(1)
 
 ## Priority Queues
+* Priority Queues are basically queues that are returned in sorted order
+* Each actual value has a priority value associated with it, but these values are often not repeated
+* Priority Queues have 4 basic functions:
+  * push() - insert value
+  * pop() - erase largest value
+  * top() - return largest value
+  * empty() - return whether or not the priority queue is empty
 
+##### Complexity
+* When elements are sorted upon addition:
+  * push(): O(n)
+  * pop(): O(1)
+  * top(): O(1)
+* When elements are added to the back:
+  * push(): O(1)
+  * pop(): O(n)
+  * top(): O(n)
 
 ## Binary Heaps
