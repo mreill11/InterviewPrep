@@ -237,4 +237,15 @@ void quickSort(int arr[], int low, int high) {
 * Average Case: O(n logn)
 * Worst Case Space: O(n)
 
+## Heapsort
+* Call the buildMaxHeap() function on the list. Also referred to as heapify(), this builds a heap from a list in O(n) operations
+* Swap the first element of the list with the final element. Decrease the considered range of the list by one
+* Call the siftDown() function on the list to sift the new first element to its appropriate index in the heap
+* Go to step (2) unless the considered range of the list is one element
+* Heapsort is not stable
+
+![heapsort](http://csharpcorner.mindcrackerinc.netdna-cdn.com/UploadFile/fd0172/heap-sort-in-java/Images/pic-2.jpg)
+
+
+
 
